@@ -322,10 +322,11 @@ class Grock {
   }
 
   static bool get isOpenSnackbar => _GrockSnackbar.isShowing;
-  // static void closeSnackbar() {
-  //   GrockSnackbar.overlayEntry?.remove();
-  //   GrockSnackbar.overlayEntry = null;
-  // }
+
+  static void closeSnackbar() {
+    _GrockSnackbar.overlayEntry?.remove();
+    _GrockSnackbar.overlayEntry = null;
+  }
 
   /// Grock.normalizeValue(10, 0, 100).printer; normalize value
   static double normalizeValue(double value, double minValue, double maxValue) {
